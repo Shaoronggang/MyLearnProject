@@ -16,15 +16,14 @@
         android:background="?attr/colorPrimary"
         />
 
-    <ImageButton
+    <ImageView
         android:id="@+id/fabButton"
         android:layout_width="56dp"
         android:layout_height="56dp"
         android:layout_gravity="bottom|right"
         android:layout_marginBottom="16dp"
         android:layout_marginRight="16dp"
-        android:background="@color/white"
-        android:src="@drawable/arrow"
+        android:src="@drawable/button_fabu_r"
         android:contentDescription="@null"
         />
 </FrameLayout>
