@@ -22,6 +22,7 @@ public class DisPatchActivity extends BaseActivity {
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.first_btn: //数据存储
+                //// TODO: 2017/4/26 点击奔溃解决
                 Intent intent = new Intent(this, RecyclerViewSlideHeaderTest.class);
                 startActivity(intent);
                 break;
