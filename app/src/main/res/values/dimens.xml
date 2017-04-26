@@ -1,0 +1,31 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="dimens10">10dp</dimen>
+    <dimen name="dimens20">20dp</dimen>
+    <dimen name="dimens9">9dp</dimen>
+    <dimen name="dimens8">8dp</dimen>
+    <dimen name="dimens12">7dp</dimen>
+    <dimen name="dimens7">7dp</dimen>
+    <dimen name="dimens0.5">0.5dp</dimen>
+    <dimen name="dimens2">2dp</dimen>
+    <dimen name="dimens93.5">93.5dp</dimen>
+    <dimen name="dimens1">1dp</dimen>
+    <dimen name="dimens21">21dp</dimen>
+    <dimen name="dimens28">28dp</dimen>
+    <dimen name="dimens32">32dp</dimen>
+    <dimen name="dimens31">31dp</dimen>
+    <dimen name="dimens30">30dp</dimen>
+    <dimen name="dimens5">5dp</dimen>
+    <dimen name="viewpager_padding">100dp</dimen>
+    <dimen name="dimens6">6dp</dimen>
+    <dimen name="dimens36">36dp</dimen>
+    <dimen name="dimens71">71dp</dimen>
+    <dimen name="dimens127">127dp</dimen>
+    <dimen name="dimens38">38dp</dimen>
+    <dimen name="dimens40">40dp</dimen>
+    <dimen name="dimens65">65dp</dimen>
+    <dimen name="dimens55">55dp</dimen>
+    <dimen name="dimens50">50dp</dimen>
+</resources>

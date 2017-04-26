@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/first_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimens10"
+            android:background="@color/colorAccent"
+            android:text="进入数据存储等测试活动" />
+
+        <Button
+            android:id="@+id/second_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimens10"
+            android:background="@color/colorAccent"
+            android:text="进入状态栏、导航栏等测试活动" />
+
+        <Button
+            android:id="@+id/third_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimens10"
+            android:background="@color/colorAccent"
+            android:text="进入下拉刷新栏等测试活动" />
+
+        <Button
+            android:id="@+id/four_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimens10"
+            android:background="@color/colorAccent"
+            android:text="进入推送分享等测试活动" />
+
+        <Button
+            android:id="@+id/five_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimens10"
+            android:background="@color/colorAccent"
+            android:text="二维码以及webView等测试活动" />
+
+        <Button
+            android:id="@+id/six_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimens10"
+            android:background="@color/colorAccent"
+            android:text="进入系统多媒体等测试活动" />
+
+        <Button
+            android:id="@+id/seven_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimens10"
+            android:background="@color/colorAccent"
+            android:text="进入使用RxJava配合Retrofit2网络请求等测试活动" />
+
+        <Button
+            android:id="@+id/eight_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimens10"
+            android:background="@color/colorAccent"
+            android:text="百度地图等测试活动" />
+
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.detao.mylearnproject.list.MainActivity">
+
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="Hello World!" />
+
+
+    <TextView
+        android:id="@+id/et_test_copy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv"
+        android:text="我已经开始很努力的做好自己的工作"
+        android:textIsSelectable="true" />
+
+    <ImageView
+        android:id="@+id/iv_test_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et_test_copy"
+       />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycleView"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@id/et_test_copy" />
+
+    <ImageView
+        android:id="@+id/iv_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/tv"
+        android:layout_marginTop="@dimen/dimens20"
+        android:src="@mipmap/ic_launcher" />
+
+    <GridView
+        android:id="@+id/line_gridview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/recycleView"
+        android:numColumns="4" />
+
+
+    <EditText
+        android:id="@+id/et_test_shore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line_gridview"
+        android:hint="请你输入需要保存的内容"
+        android:textColor="@color/colorPrimary" />
+
+    <EditText
+        android:id="@+id/et_test_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et_test_shore"
+        android:hint="请你输入密码"
+        android:inputType="numberPassword"
+        android:textColor="@color/colorPrimary" />
+
+    <Button
+        android:id="@+id/btn_keep"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et_test_password"
+        android:text="保存" />
+
+    <Button
+        android:id="@+id/btn_get"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et_test_password"
+        android:layout_toRightOf="@id/btn_keep"
+        android:text="获取数据" />
+
+    <DatePicker
+        android:id="@+id/datePicker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_get"
+        android:calendarViewShown="false" />
+
+
+</RelativeLayout>
