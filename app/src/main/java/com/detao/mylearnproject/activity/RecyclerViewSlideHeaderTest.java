@@ -6,11 +6,12 @@ import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
-import android.widget.ImageButton;
+import android.widget.ImageView;
 
 import com.detao.mylearnproject.R;
 import com.detao.mylearnproject.adapter.SlideRecyclerAdapter;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
@@ -28,7 +29,7 @@ public class RecyclerViewSlideHeaderTest extends ActionBarActivity {
     @BindView(R.id.toolbar)
     Toolbar toolbar;
     @BindView(R.id.fabButton)
-    ImageButton fabButton;
+    ImageView fabButton;
     private List<String> datas;
 
     @Override
@@ -41,6 +42,7 @@ public class RecyclerViewSlideHeaderTest extends ActionBarActivity {
 
     //初始化数据
     private void initData() {
+        datas = new ArrayList<>();
         for (int i = 0; i < 11; i++) {
             datas.add("你在哪里，让我看到你的手：" + i);
         }
