@@ -1,9 +1,7 @@
 package com.detao.mylearnproject.activity;
 
 import android.view.View;
-import android.webkit.WebSettings;
 import android.webkit.WebView;
-import android.webkit.WebViewClient;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -17,6 +15,8 @@ import com.detao.mylearnproject.bean.UserInfo;
 import butterknife.BindView;
 import retrofit2.Call;
 import retrofit2.http.GET;
+
+import static com.detao.mylearnproject.util.AppUtils.webViewTest;
 
 /**
  * Created by shaoronggang on 2017/4/14.
@@ -46,7 +46,7 @@ public class HistoryTodayActivity extends BaseActivity {
     @Override
     public void afterView() {
         super.afterView();
-        webViewTest(url);
+        webViewTest(url,webTest);
 
         ivScan.setImageResource(R.drawable.scan_weburl); //设置网址显示的扫描
         ivScanImage.setImageResource(R.drawable.scan_image_url); //设置图片网址的扫描
@@ -73,7 +73,7 @@ public class HistoryTodayActivity extends BaseActivity {
                             ivAfterScan.setVisibility(View.VISIBLE);
                             Glide.with(HistoryTodayActivity.this).load(code).placeholder(R.drawable.meinv1).into(ivAfterScan);
                         } else if (code.startsWith("http://")) {
-                            webViewTest(code);
+                            webViewTest(code,webTest);
                         } else {
                             tvScanText.setText(code);
                         }
@@ -90,26 +90,4 @@ public class HistoryTodayActivity extends BaseActivity {
      */
     String url = "http://www.baidu.com";
 
-    private void webViewTest(String url) {
-
-        WebSettings settings = webTest.getSettings();
-        settings.setJavaScriptEnabled(true);  //如果页面中使用了JavaScript，不加该代码页面不显示。
-        settings.setBuiltInZoomControls(true); //无限放大
-        /*页面缩放 适应手机屏幕*/
-        settings.setUseWideViewPort(true);
-        settings.setLoadWithOverviewMode(true);
-        webTest.loadUrl(url);//网络地址http://，本地地址file:///      显示页面
-        webTest.setWebViewClient(new WebViewClient() {
-            @Override
-            public void onPageFinished(WebView view, String url) {
-                super.onPageFinished(view, url);
-            }
-
-            @Override
-            public boolean shouldOverrideUrlLoading(WebView view, String url) {
-                view.loadUrl(url);
-                return true;//返回值为true时在WebView中打开，为false时调用浏览器打开
-            }
-        });
-    }
 }

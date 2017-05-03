@@ -2,6 +2,11 @@ package com.detao.mylearnproject;
 
 import android.app.Application;
 
+import com.lzy.okgo.*;
+import com.lzy.okgo.BuildConfig;
+
+import org.xutils.x;
+
 import cn.jpush.android.api.JPushInterface;
 
 /**
@@ -18,7 +23,10 @@ public class MyApplication extends Application {
     public void onCreate() {
         super.onCreate();
 
+        OkGo.init(this);
         JPushInterface.setDebugMode(true);
         JPushInterface.init(this);
+        x.Ext.init(this);
+        x.Ext.setDebug(BuildConfig.DEBUG);
     }
 }

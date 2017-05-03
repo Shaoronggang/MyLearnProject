@@ -168,7 +168,9 @@
             android:screenOrientation="portrait"
             android:theme="@style/MaterialAppTheme"
             />
-
+        <activity android:name=".activity.WebViewActivtiy"
+            android:screenOrientation="portrait"
+            />
     </application>
 
 

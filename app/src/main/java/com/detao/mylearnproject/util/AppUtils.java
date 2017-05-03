@@ -4,6 +4,9 @@ import android.content.Context;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.PackageManager.NameNotFoundException;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 
 /**
  * Created by shaoronggang on 2017/4/20.
@@ -60,6 +63,27 @@ public class AppUtils {
         return null;
     }
 
+    public static void webViewTest(String url,WebView webView) {
 
+        WebSettings settings = webView.getSettings();
+        settings.setJavaScriptEnabled(true);  //如果页面中使用了JavaScript，不加该代码页面不显示。
+        settings.setBuiltInZoomControls(true); //无限放大
+        /*页面缩放 适应手机屏幕*/
+        settings.setUseWideViewPort(true);
+        settings.setLoadWithOverviewMode(true);
+        webView.loadUrl(url);//网络地址http://，本地地址file:///      显示页面
+        webView.setWebViewClient(new WebViewClient() {
+            @Override
+            public void onPageFinished(WebView view, String url) {
+                super.onPageFinished(view, url);
+            }
+
+            @Override
+            public boolean shouldOverrideUrlLoading(WebView view, String url) {
+                view.loadUrl(url);
+                return true;//返回值为true时在WebView中打开，为false时调用浏览器打开
+            }
+        });
+    }
 
 }
