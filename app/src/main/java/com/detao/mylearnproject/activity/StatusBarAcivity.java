@@ -33,6 +33,7 @@ public class StatusBarAcivity extends BaseActivity {
     public void setTitleState() {
         super.setTitleState();
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN); //设置相应的状态栏为全屏
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON,WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
     }
 
     @Override

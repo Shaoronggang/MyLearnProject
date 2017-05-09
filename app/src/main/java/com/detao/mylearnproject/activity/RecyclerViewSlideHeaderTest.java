@@ -1,5 +1,6 @@
 package com.detao.mylearnproject.activity;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -46,6 +47,8 @@ public class RecyclerViewSlideHeaderTest extends BaseActivity {
     Toolbar toolbar;
     @BindView(R.id.fabButton)
     ImageView fabButton;
+
+    private ProgressDialog progressDialog;
     private List<String> datas;
     private List<ServerModel.ResultBean> results;
     private List<GuoNeiBean.NewslistBean> result;
@@ -75,11 +78,12 @@ public class RecyclerViewSlideHeaderTest extends BaseActivity {
 
 //        Map<String,String> params = new HashMap<>();
 
-
+        progressDialog =  ProgressDialog.show(this,"","正在加载中");
         final String url = "http://api.juheapi.com/japi/toh";//聚合数据
         new Thread(new Runnable() {
             @Override
             public void run() {
+
 
                 //创建一个Request对象
                 OkHttpClient client = new OkHttpClient();
@@ -113,6 +117,7 @@ public class RecyclerViewSlideHeaderTest extends BaseActivity {
                     @Override
                     public void onResponse(Call call, Response response) throws IOException {
                         final String data = response.body().string();
+
                         Log.e("Data", data + "");
                         //在主线程中进行UI修改操作
                         runOnUiThread(new Runnable() {
@@ -129,8 +134,7 @@ public class RecyclerViewSlideHeaderTest extends BaseActivity {
                                 if (result != null) {
                                     initData(result);
                                 }
-
-
+                            progressDialog.dismiss();
                             }
                         });
 

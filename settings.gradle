@@ -1,2 +1,2 @@
-include ':app', ':youkumenu', ':zwlviewpager'
+include ':app','zwlviewpager'
 
