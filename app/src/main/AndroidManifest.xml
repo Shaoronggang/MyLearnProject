@@ -180,6 +180,9 @@
         <activity android:name=".youkumenu.YoukuActivity"
             android:screenOrientation="portrait"/>
 
+        <activity android:name=".activity.ViewPagerActivity"
+            android:screenOrientation="portrait"/>
+
     </application>
 
 </manifest>

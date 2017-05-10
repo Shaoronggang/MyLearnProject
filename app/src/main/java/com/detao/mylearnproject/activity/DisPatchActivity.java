@@ -48,7 +48,8 @@ public class DisPatchActivity extends BaseActivity {
                 startActivity(intentyouku);
                 break;
             case R.id.seven_btn: //RxJava配合Retrofit2网络请求
-
+                Intent intentPager = new Intent(this,ViewPagerActivity.class);
+                startActivity(intentPager);
                 break;
             case R.id.eight_btn: //百度地图
                 Intent intent3 = new Intent(this,MyTestActivity.class);
