@@ -28,4 +28,5 @@
     <dimen name="dimens65">65dp</dimen>
     <dimen name="dimens55">55dp</dimen>
     <dimen name="dimens50">50dp</dimen>
+    <dimen name="dimens33">33dp</dimen>
 </resources>

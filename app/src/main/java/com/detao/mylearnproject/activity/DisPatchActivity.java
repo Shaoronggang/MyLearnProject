@@ -5,6 +5,8 @@ import android.view.View;
 
 import com.detao.mylearnproject.R;
 import com.detao.mylearnproject.base.BaseActivity;
+import com.detao.mylearnproject.test.MyTestActivity;
+import com.detao.mylearnproject.youkumenu.YoukuActivity;
 
 import butterknife.OnClick;
 
@@ -42,11 +44,15 @@ public class DisPatchActivity extends BaseActivity {
             startActivity(intent2);
                 break;
             case R.id.six_btn: //系统多媒体
+                Intent intentyouku = new Intent(this,YoukuActivity.class);
+                startActivity(intentyouku);
                 break;
             case R.id.seven_btn: //RxJava配合Retrofit2网络请求
 
                 break;
             case R.id.eight_btn: //百度地图
+                Intent intent3 = new Intent(this,MyTestActivity.class);
+                startActivity(intent3);
                 break;
         }
     }
