@@ -38,6 +38,8 @@ public class ViewPagerActivity extends BaseActivity implements ViewPager.OnPageC
     private int prePosition = 0;
 
     ArrayList<ImageView> imageViews;
+    ArrayList<String> pagerTitles;
+
 
     /**
      * 是否已经滑动
@@ -62,6 +64,16 @@ public class ViewPagerActivity extends BaseActivity implements ViewPager.OnPageC
             "你微微地笑着，不同我说什么话"
     };
 
+    //页面头部名字
+    private final String[] titles = {
+            "天霸",
+            "动霸",
+            "鸣人",
+            "天宫号",
+            "Dream"
+    };
+
+
     private Handler handler = new Handler() {
         @Override
         public void handleMessage(Message msg) {
@@ -83,11 +95,12 @@ public class ViewPagerActivity extends BaseActivity implements ViewPager.OnPageC
     @Override
     public void afterView() {
         super.afterView();
-        imageViews = new ArrayList<>();
+        imageViews = new ArrayList<ImageView>();
+        pagerTitles = new ArrayList<String>();
         for (int i = 0; i < imageIds.length; i++) {
             ImageView imageView = new ImageView(this);
             imageView.setBackgroundResource(imageIds[i]);
-
+            pagerTitles.add(titles[i]);
             imageViews.add(imageView);
 
             //添加点
@@ -210,17 +223,17 @@ public class ViewPagerActivity extends BaseActivity implements ViewPager.OnPageC
                 public boolean onTouch(View v, MotionEvent event) {
                     switch (event.getAction()) {
                         case MotionEvent.ACTION_DOWN: //手指按下
-                            Log.e(TAG,"onTouch==手指按下");
-                        handler.removeCallbacksAndMessages(null);
+                            Log.e(TAG, "onTouch==手指按下");
+                            handler.removeCallbacksAndMessages(null);
                             break;
                         case MotionEvent.ACTION_MOVE: //手指在控件上移动
                             break;
                         case MotionEvent.ACTION_CANCEL: //手指按下
-                            Log.e(TAG,"onTouch==事件取消");
+                            Log.e(TAG, "onTouch==事件取消");
                             break;
                         case MotionEvent.ACTION_UP: //手指离开
-                        handler.removeCallbacksAndMessages(null);
-                        handler.sendEmptyMessageDelayed(0,4000);
+                            handler.removeCallbacksAndMessages(null);
+                            handler.sendEmptyMessageDelayed(0, 4000);
                             break;
                     }
                     return false;
@@ -231,10 +244,10 @@ public class ViewPagerActivity extends BaseActivity implements ViewPager.OnPageC
             imageView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Log.e(TAG,"点击事件");
-                    int pos = (int)v.getTag()%imageViews.size();
+                    Log.e(TAG, "点击事件");
+                    int pos = (int) v.getTag() % imageViews.size();
                     String text = imageDescriptions[pos];
-                    Toast.makeText(ViewPagerActivity.this, "text=="+text, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(ViewPagerActivity.this, "text==" + text, Toast.LENGTH_SHORT).show();
                 }
             });
 
@@ -253,6 +266,12 @@ public class ViewPagerActivity extends BaseActivity implements ViewPager.OnPageC
         public void destroyItem(ViewGroup container, int position, Object object) {
 //            super.destroyItem(container, position, object);
             container.removeView((View) object);
+        }
+
+        @Override
+        public CharSequence getPageTitle(int position) {
+            int realPosition = position % imageViews.size();
+            return pagerTitles.get(realPosition);
         }
     }
 }

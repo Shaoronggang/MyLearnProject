@@ -119,4 +119,11 @@ public class YoukuActivity extends BaseActivity {
 
         return super.onKeyDown(keyCode, event);
     }
+
+    @Override
+    public void afterView() {
+        super.afterView();
+
+
+    }
 }

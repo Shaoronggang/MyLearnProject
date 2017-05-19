@@ -2,10 +2,12 @@ package com.detao.mylearnproject.test;
 
 import android.os.Handler;
 import android.util.Log;
+import android.widget.TextView;
 
 import com.detao.mylearnproject.R;
 import com.detao.mylearnproject.base.BaseActivity;
 
+import butterknife.BindView;
 import butterknife.OnClick;
 
 import static com.detao.mylearnproject.util.AppUtils.getAppName;
@@ -26,7 +28,8 @@ import static com.detao.mylearnproject.util.AppUtils.isWifiConnected;
 
 public class MyTestActivity extends BaseActivity {
     private Handler handler = new Handler();
-
+    @BindView(R.id.tv_test_click)
+    TextView tvTestClick;
 
     @Override
     protected int getResLayout() {
@@ -82,6 +85,20 @@ public class MyTestActivity extends BaseActivity {
                 +"\n" +"获取当前设备的MAC地址：" + getMacAddress(MyTestActivity.this) + "\n" +"获取当前程序的版本号：" + getAppVersion(MyTestActivity.this) + "\n" +"获取当前程序版本名称：" + getVersionName(MyTestActivity.this)
                  + "获取当前程序名：" + getAppName(MyTestActivity.this)
                 );
+
+//                Animator animator = AnimatorInflater.loadAnimator(MyTestActivity.this,R.animator.anim_in);
+//                animator.setTarget(tvTestClick);
+//                animator.setDuration(2000);
+//                animator.start();
+
+//                float curTranslationX = tvTestClick.getTranslationX();
+//                ObjectAnimator animator = ObjectAnimator.ofFloat(tvTestClick,"translationX",curTranslationX,500,curTranslationX);
+//                animator.setInterpolator(new BounceInterpolator());
+//                animator.setDuration(5000);
+//                animator.start();
+
+                tvTestClick.animate().alpha(0.5f).setDuration(2000).x(200).y(200);
+
 //                Log.e("Sleep", "待唤醒" + isSleeping(MyTestActivity.this));
 //                if (isSleeping(MyTestActivity.this)) { //判断是否是睡眠(锁屏)状态
 //                    Log.e("Sleep", "即将唤醒");
@@ -89,7 +106,7 @@ public class MyTestActivity extends BaseActivity {
 //                    Toast.makeText(MyTestActivity.this, "你好吗", Toast.LENGTH_SHORT).show();
 //                }
             }
-        },3000);
+        },300);
 
 
 

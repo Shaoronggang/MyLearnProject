@@ -19,17 +19,24 @@ public class Tools {
     }
 
     public static void showView(ViewGroup view, int startOffset) {
+//        ObjectAnimator animator = ObjectAnimator.ofFloat(view,"translationX",view.getTranslationX(),0);
         ObjectAnimator animator = ObjectAnimator.ofFloat(view,"rotation",180,360);
+//        ObjectAnimator animator = ObjectAnimator.ofFloat(view,"alpha",0f,1f);
+//        ObjectAnimator animator = ObjectAnimator.ofFloat(view,"scaleX",1f,1f);
         animator.setDuration(500);
         animator.setStartDelay(startOffset);
         animator.start();
 
+        //旋转时设置原点
         view.setPivotX(view.getWidth()/2);
         view.setPivotY(view.getHeight());
     }
 
     public static void hideView(ViewGroup view, int startOffset) {
-        ObjectAnimator animator = ObjectAnimator.ofFloat(view, "rotation", 0, 180);
+//        ObjectAnimator animator = ObjectAnimator.ofFloat(view, "translationX",view.getTranslationX(),-700);
+        ObjectAnimator animator = ObjectAnimator.ofFloat(view, "rotation",0,180);
+//        ObjectAnimator animator = ObjectAnimator.ofFloat(view, "alpha",0f,1f);
+//        ObjectAnimator animator = ObjectAnimator.ofFloat(view, "scaleX",1f,3f);
         animator.setDuration(500);
         animator.setStartDelay(startOffset);
         animator.start();

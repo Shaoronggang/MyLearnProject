@@ -5,7 +5,6 @@ import android.view.View;
 
 import com.detao.mylearnproject.R;
 import com.detao.mylearnproject.base.BaseActivity;
-import com.detao.mylearnproject.test.MyTestActivity;
 import com.detao.mylearnproject.youkumenu.YoukuActivity;
 
 import butterknife.OnClick;
@@ -24,7 +23,6 @@ public class DisPatchActivity extends BaseActivity {
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.first_btn: //数据存储
-                //// TODO: 2017/4/26 点击奔溃解决
                 Intent intent = new Intent(this, RecyclerViewSlideHeaderTest.class);
                 startActivity(intent);
                 break;
@@ -52,8 +50,14 @@ public class DisPatchActivity extends BaseActivity {
                 startActivity(intentPager);
                 break;
             case R.id.eight_btn: //百度地图
-                Intent intent3 = new Intent(this,MyTestActivity.class);
-                startActivity(intent3);
+//                Intent intent3 = new Intent(this,MyTestActivity.class);  //测试视图
+//                startActivity(intent3);
+//                Intent intentExpand = new Intent(this, ViewpagerTabHost.class);  //轮播图广告
+//                startActivity(intentExpand);
+//                Intent intentpull = new Intent(this, PullDownActivity.class);  //自定义视图--下拉框
+//                startActivity(intentpull);
+                Intent toggleIntent = new Intent(this, ToggleButtonActivity.class);
+                startActivity(toggleIntent);
                 break;
         }
     }
