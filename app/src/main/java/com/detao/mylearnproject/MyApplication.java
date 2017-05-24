@@ -2,6 +2,8 @@ package com.detao.mylearnproject;
 
 import android.app.Application;
 
+import com.iflytek.cloud.SpeechConstant;
+import com.iflytek.cloud.SpeechUtility;
 import com.lzy.okgo.*;
 import com.lzy.okgo.BuildConfig;
 
@@ -23,6 +25,7 @@ public class MyApplication extends Application {
     public void onCreate() {
         super.onCreate();
 
+        SpeechUtility.createUtility(MyApplication.this, SpeechConstant.APPID + "=5922b4fb");
         OkGo.init(this);
         JPushInterface.setDebugMode(true);
         JPushInterface.init(this);

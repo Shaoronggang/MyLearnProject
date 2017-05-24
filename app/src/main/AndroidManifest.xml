@@ -61,6 +61,11 @@
             android:name=".activity.StatusBarAcivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity android:name=".activity.ToggleButtonActivity"/>
+        <activity android:name=".activity.MyattrActivity"/>
+        <activity android:name=".activity.EventTestActivity"/>
+        <activity android:name=".activity.MyViewPagerActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            />
         <!-- Required SDK 核心功能-->
         <!-- 可配置android:process参数将PushService放在其他进程中 -->
         <!--<service-->
