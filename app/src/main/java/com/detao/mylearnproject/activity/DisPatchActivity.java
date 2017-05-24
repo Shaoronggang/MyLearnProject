@@ -58,9 +58,11 @@ public class DisPatchActivity extends BaseActivity {
 //                startActivity(intentpull);
 //                Intent attriIntent = new Intent(this,MyattrActivity.class);  //自定义属性
 //                startActivity(attriIntent);
-//                Intent eventIntent = new Intent(this,EventTestActivity.class);
+//                Intent eventIntent = new Intent(this,EventTestActivity.class);  //事件处理
 //                startActivity(eventIntent);
-                Intent viewpagerIntent = new Intent(this, MyViewPagerActivity.class);
+//                Intent viewpagerIntent = new Intent(this, MyViewPagerActivity.class); // 仿ViewPager
+//                startActivity(viewpagerIntent);
+                Intent viewpagerIntent = new Intent(this, QuickIndexActivity.class);
                 startActivity(viewpagerIntent);
 
 //                Intent toggleIntent = new Intent(this, ToggleButtonActivity.class);
