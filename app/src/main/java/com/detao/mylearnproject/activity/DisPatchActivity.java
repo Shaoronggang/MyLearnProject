@@ -56,16 +56,16 @@ public class DisPatchActivity extends BaseActivity {
 //                startActivity(intentExpand);
 //                Intent intentpull = new Intent(this, PullDownActivity.class);  //自定义视图--下拉框
 //                startActivity(intentpull);
-//                Intent attriIntent = new Intent(this,MyattrActivity.class);  //自定义属性
-//                startActivity(attriIntent);
+                Intent attriIntent = new Intent(this,MyattrActivity.class);  //自定义属性
+                startActivity(attriIntent);
 //                Intent eventIntent = new Intent(this,EventTestActivity.class);  //事件处理
 //                startActivity(eventIntent);
 //                Intent viewpagerIntent = new Intent(this, MyViewPagerActivity.class); // 仿ViewPager
 //                startActivity(viewpagerIntent);
-                Intent viewpagerIntent = new Intent(this, QuickIndexActivity.class);
-                startActivity(viewpagerIntent);
+//                Intent viewpagerIntent = new Intent(this, QuickIndexActivity.class); //联系人快速索引
+//                startActivity(viewpagerIntent);
 
-//                Intent toggleIntent = new Intent(this, ToggleButtonActivity.class);
+//                Intent toggleIntent = new Intent(this, ToggleButtonActivity.class); //自定义开关
 //                startActivity(toggleIntent);
                 break;
         }

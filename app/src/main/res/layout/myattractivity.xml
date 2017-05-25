@@ -11,10 +11,13 @@
     android:id="@+id/my"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:onClick="open"
     app:my_age="18"
     app:my_name="小刚"
     app:my_bg="@drawable/d"
     />
+
+<com.detao.mylearnproject.view.WaveView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" />
 
 </RelativeLayout>
