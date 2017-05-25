@@ -70,6 +70,8 @@
         <activity android:name=".activity.QuickIndexActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
             />
+
+        <activity android:name=".activity.SlideActivity"/>
         <!-- Required SDK 核心功能-->
         <!-- 可配置android:process参数将PushService放在其他进程中 -->
         <!--<service-->

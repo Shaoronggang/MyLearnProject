@@ -56,8 +56,10 @@ public class DisPatchActivity extends BaseActivity {
 //                startActivity(intentExpand);
 //                Intent intentpull = new Intent(this, PullDownActivity.class);  //自定义视图--下拉框
 //                startActivity(intentpull);
-                Intent attriIntent = new Intent(this,MyattrActivity.class);  //自定义属性
-                startActivity(attriIntent);
+//                Intent attriIntent = new Intent(this, MyattrActivity.class);  //自定义属性
+//                startActivity(attriIntent);
+                Intent slideIntent = new Intent(this, SlideActivity.class);  //侧滑菜单属性
+                startActivity(slideIntent);
 //                Intent eventIntent = new Intent(this,EventTestActivity.class);  //事件处理
 //                startActivity(eventIntent);
 //                Intent viewpagerIntent = new Intent(this, MyViewPagerActivity.class); // 仿ViewPager
