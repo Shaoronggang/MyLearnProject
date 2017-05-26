@@ -1,5 +1,6 @@
 package com.detao.mylearnproject.activity;
 
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
@@ -35,6 +36,11 @@ public class SlideActivity extends BaseActivity {
     public void afterView() {
         super.afterView();
 
+        //***测试代码：功能测试某段代码中是否包含了某一段代码  ***//
+        String str1 = "suanfaaihaozhe";
+        String str2 = "suanfa";
+        Log.e("Max最新结果：",str1.indexOf(str2)>-1?"yes":"no");
+        //******
         items = new ArrayList<>();
         for (int i = 0; i < 100; i++) {
             items.add(new MyBean("Content" + i));
